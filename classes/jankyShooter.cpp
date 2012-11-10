@@ -4,12 +4,13 @@
 
 /// Shooter for Rebound Rumble 2012
 
-#include "jankyShooter.h"
+// Test from Bob
+#include "jankyShooter_new_Filename.h"
 
 JankyShooter::JankyShooter(int JagPort, int EncoderAPort, int EncoderBPort):
 	ShooterMotor(JagPort),
 	ShooterEncoder(EncoderAPort,EncoderBPort,false,Encoder::k1X),
-	PID(0.03,0.03,0.03,&ShooterEncoder,&ShooterMotor)
+	PID(0.05,0.1,0.04,&ShooterEncoder,&ShooterMotor)
 {
 	ShooterEncoder.Start();
 	ShooterMotor.Set(0.0);
