@@ -7,8 +7,8 @@
 // Test from Bob
 #include "jankyShooter_new_Filename.h"
 
+// More documentation.
 JankyShooter::JankyShooter(int JagPort, int EncoderAPort, int EncoderBPort):
-	ShooterMotor(JagPort),
 	ShooterEncoder(EncoderAPort,EncoderBPort,false,Encoder::k1X),
 	PID(0.05,0.1,0.04,&ShooterEncoder,&ShooterMotor)
 {
